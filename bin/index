@@ -1,0 +1,25 @@
+#!/usr/bin/php
+<?php
+declare(strict_types=1);
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+use libSort\{Sorter, ReversSort, NormalSort, NullSort};
+
+//-----------------------------------------------//
+
+$data = [25, 0, -8, 15, 3, -7, 6, -2, 9];
+
+//-----------TEST---------------------------------//
+
+echo "Without Sort ";
+$sort = new Sorter(new NullSort());
+print_r($sort->sort($data));
+
+echo "Sort ";
+$sort->setSort(new NormalSort());
+print_r($sort->sort($data));
+
+echo "Revers Sort ";
+$sort->setSort(new ReversSort());
+print_r($sort->sort($data));

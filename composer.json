@@ -1,0 +1,35 @@
+{
+  "name": "vogak/sort-lib",
+  "description": "This is a library  for sort array and resort array.",
+  "keywords": ["library", "sort", "revers sort"],
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Pavel Peregin",
+      "email": "pereginp@gmail.com"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.3"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^2.14"
+  },
+  "autoload": {
+    "psr-4": {
+      "libSort\\": "src/"
+    }
+  },
+  "scripts": {
+    "cs-check": "php-cs-fixer fix --dry-run --diff --ansi",
+    "cs-fix": "php-cs-fixer fix --diff --ansi"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/vogak/Design-Patterns/tree/master/vogak"
+    }
+  ]
+}
