@@ -6,7 +6,7 @@ This is a library for sorting and resorting array.
 Installation
 ------------
 
-For creating new library based on this template just execute the following command
+For creating library of sorting just execute the following command
 
 ```
 $ composer require vogak/sort-lib
@@ -14,50 +14,25 @@ $ composer require vogak/sort-lib
 
 Usage
 -----
-
-You push array ```$data ``` and than you get result:
-```bash
-Null Sort
-Array
-(
-    [0] => 25
-    [1] => 0
-    [2] => -8
-    [3] => 15
-    [4] => 3
-    [5] => -7
-    [6] => 6
-    [7] => -2
-    [8] => 9
-)
-Sort
-Array
-(
-    [0] => -8
-    [1] => -7
-    [2] => -2
-    [3] => 0
-    [4] => 3
-    [5] => 6
-    [6] => 9
-    [7] => 15
-    [8] => 25
-)
-Revers Sort
-Array
-(
-    [0] => 25
-    [1] => 15
-    [2] => 9
-    [3] => 6
-    [4] => 3
-    [5] => 0
-    [6] => -2
-    [7] => -7
-    [8] => -8
-)
+At first we create sort strategy with null object
+```php
+$sort = new Sorter(new NullSort());
 ```
 
+Than we chang sort method 
+```php
+$sort->setSort(new NormalSort());
+```
+And revers sort
+```php
+$sort->setSort(new ReversSort());
+```
+For sorting array with with result
+```php
+print_r($sort->sort($data));
+```
+
+P.S.
 Null sort: you have null result and have original array.
 Sort: result of array with sort from the lowest to the biggest.
 Revers sort: result of array with revers sort from the biggest to the lowest.

@@ -1,6 +1,6 @@
 <?php
 
-namespace libSort;
+namespace Vogak\LibSort;
 
 interface InterfaceSorter
 {

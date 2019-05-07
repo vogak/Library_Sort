@@ -19,17 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "libSort\\": "src/"
+      "Vogak\\LibSort\\": "src/"
     }
-  },
-  "scripts": {
-    "cs-check": "php-cs-fixer fix --dry-run --diff --ansi",
-    "cs-fix": "php-cs-fixer fix --diff --ansi"
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/vogak/Design-Patterns/tree/master/vogak"
-    }
-  ]
+  }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace libSort;
+namespace Vogak\LibSort;
 
 class Sorter
 {
@@ -14,6 +14,7 @@ class Sorter
     public function setSort(InterfaceSorter $sort)
     {
         $this->sort= $sort;
+        return $sort;
     }
 
     public function sort(array $data): array
