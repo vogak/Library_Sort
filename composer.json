@@ -1,7 +1,11 @@
 {
   "name": "vogak/sort-lib",
   "description": "This is a library  for sort array and resort array.",
-  "keywords": ["library", "sort", "revers sort"],
+  "keywords": [
+    "library",
+    "sort",
+    "revers sort"
+  ],
   "type": "library",
   "license": "BSD-3-Clause",
   "authors": [
@@ -21,5 +25,9 @@
     "psr-4": {
       "Vogak\\LibSort\\": "src/"
     }
+  },
+  "scripts": {
+    "cs-check": "php-cs-fixer fix --allow-risky=yes --diff --ansi --dry-run",
+    "cs-fix": "php-cs-fixer fix --allow-risky=yes --diff --ansi"
   }
 }
